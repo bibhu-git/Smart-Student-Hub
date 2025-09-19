@@ -155,19 +155,19 @@ export default function ReportsPage() {
             <tbody>
               {[
                 {
-                  student: "Amit Kumar",
+                  student: "Bibhu Ranjan Mohanty",
                   activity: "AI Workshop",
                   status: "Approved",
                   date: "2025-08-15",
                 },
                 {
-                  student: "Sneha Rani",
+                  student: "Dinakrushna Mohanta",
                   activity: "React Certification",
                   status: "Pending",
                   date: "2025-08-20",
                 },
                 {
-                  student: "Rahul Das",
+                  student: "Ranjan Kumar Mohanta",
                   activity: "Hackathon",
                   status: "Approved",
                   date: "2025-09-01",

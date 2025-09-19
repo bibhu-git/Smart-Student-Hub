@@ -16,7 +16,6 @@ import UploadForm from "../components/UploadForm";
 import Portfolio from "../components/Portfolio";
 import Achievements from "../components/Achievements";
 import Events from "../components/Events";
-import Resources from "../components/Resources";
 
 export default function DashboardStudent() {
   const [activeTab, setActiveTab] = useState("dashboard");
@@ -55,7 +54,6 @@ export default function DashboardStudent() {
             { key: "dashboard", label: "Dashboard", icon: <User className="w-5 h-5" /> },
             { key: "achievements", label: "My Achievements", icon: <Award className="w-5 h-5" /> },
             { key: "events", label: "Events", icon: <Calendar className="w-5 h-5" /> },
-            { key: "resources", label: "Resources", icon: <BookOpen className="w-5 h-5" /> },
             { key: "upload", label: "Upload Certificate", icon: <Upload className="w-5 h-5" /> },
             { key: "portfolio", label: "Portfolio", icon: <FileText className="w-5 h-5" /> },
           ].map((item) => (
@@ -113,7 +111,7 @@ export default function DashboardStudent() {
           <div className="flex items-center gap-4 ml-auto">
             <Bell className="w-6 h-6 text-gray-600 cursor-pointer hover:text-indigo-600 transition" />
             <img
-              src="https://i.pravatar.cc/40?img=12"
+              src="https://static.vecteezy.com/system/resources/thumbnails/036/594/092/small_2x/man-empty-avatar-photo-placeholder-for-social-networks-resumes-forums-and-dating-sites-male-and-female-no-photo-images-for-unfilled-user-profile-free-vector.jpg"
               alt="profile"
               className="w-10 h-10 rounded-full border"
             />
@@ -189,7 +187,6 @@ export default function DashboardStudent() {
         {activeTab === "portfolio" && <Portfolio />}
         {activeTab === "achievements" && <Achievements />}
         {activeTab === "events" && <Events />}
-        {activeTab === "resources" && <Resources />}
       </main>
     </div>
   );

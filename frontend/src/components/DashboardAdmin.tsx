@@ -56,6 +56,7 @@ export default function Dashboard() {
             <button
               key={item.key}
               onClick={() => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 setActivePage(item.key as any);
                 setSidebarOpen(false);
               }}
@@ -103,7 +104,7 @@ export default function Dashboard() {
           <div className="flex items-center gap-4 ml-auto">
             <Bell className="w-6 h-6 text-gray-600 cursor-pointer hover:text-indigo-600 transition" />
             <img
-              src="https://i.pravatar.cc/40"
+              src="https://ctetezpur.org/wp-content/uploads/2025/07/demouser.jpeg"
               alt="profile"
               className="w-10 h-10 rounded-full border"
             />
@@ -151,9 +152,12 @@ export default function Dashboard() {
                 </thead>
                 <tbody>
                   {[
-                    { student: "Amit Kumar", activity: "Workshop: AI & ML", status: "Approved", date: "2025-09-10" },
-                    { student: "Sneha Rani", activity: "Certification: ReactJS", status: "Pending", date: "2025-09-12" },
-                    { student: "Rahul Das", activity: "Hackathon Participation", status: "Approved", date: "2025-09-14" },
+                    { student: "Bibhu Ranjan Mohanty", activity: "Workshop: AI & ML", status: "Approved", date: "2025-09-10" },
+                    { student: "Dinakrushna Mohanta", activity: "Certification: ReactJS", status: "Pending", date: "2025-09-12" },
+                    { student: "Rosni Palei", activity: "Hackathon Participation", status: "Approved", date: "2025-09-14" },
+                    { student: "Anuradha Patra", activity: "Hackathon Participation", status: "Approved", date: "2025-09-14" },
+                    { student: "Nabagata Mohapatra", activity: "Hackathon Participation", status: "Approved", date: "2025-09-14" },
+                    { student: "Rojalin Swain", activity: "Hackathon Participation", status: "Approved", date: "2025-09-14" },
                   ].map((row, i) => (
                     <tr key={i} className="border-b hover:bg-gray-50">
                       <td className="px-4 py-3">{row.student}</td>
