@@ -13,30 +13,41 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-indigo-50 to-pink-50">
-      <div className="bg-white shadow-lg rounded-xl p-8 max-w-sm w-full">
-        <h2 className="text-2xl font-bold mb-6 text-center text-indigo-600">
-          Smart Student Hub Login
+    <div className="flex items-center justify-center min-h-[85vh] bg-gradient-to-br from-indigo-100 via-pink-50 to-purple-100">
+      <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md transform transition hover:scale-105 duration-300">
+        {/* Header */}
+        <h2 className="text-3xl font-extrabold mb-2 text-center text-indigo-600">
+          Welcome Back 👋
         </h2>
+        <p className="text-center text-gray-500 mb-6">
+          Please select your role to continue
+        </p>
 
-        <label className="block mb-4">
-          <span className="text-gray-700 font-medium">Select Role</span>
+        {/* Role Selector */}
+        <label className="block mb-6">
+          <span className="text-gray-700 font-medium">Login as</span>
           <select
             value={role}
             onChange={(e) => setRole(e.target.value as "student" | "admin")}
-            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500"
+            className="w-full mt-2 p-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none bg-gray-50"
           >
             <option value="student">Student</option>
             <option value="admin">Admin</option>
           </select>
         </label>
 
+        {/* Login Button */}
         <button
           onClick={handleLogin}
-          className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
+          className="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold text-lg shadow-md hover:bg-indigo-700 transition duration-200"
         >
-          Login as {role.charAt(0).toUpperCase() + role.slice(1)}
+          Continue as {role.charAt(0).toUpperCase() + role.slice(1)}
         </button>
+
+        {/* Footer */}
+        <p className="mt-6 text-center text-sm text-gray-500">
+          Powered by <span className="font-semibold text-indigo-600">Smart Student Hub</span>
+        </p>
       </div>
     </div>
   );
